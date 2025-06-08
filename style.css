@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400, 500, 700;
+    /* background-image: var(--dark-gradient); */
+    background-color: var(--color-neutral-900);
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+:root {
+    /* Color Variables (neutral colors) */
+    --color-neutral-0: hsl(200, 60%, 99%);
+    --color-neutral-100: hsl(0, 0%, 93%);
+    --color-neutral-200: hsl(217, 61%, 90%);
+    --color-neutral-300: hsl(0, 0%, 78%);
+    --color-neutral-600: hsl(226, 11%, 37%);
+    --color-neutral-700: hsl(225, 23%, 24%);
+    --color-neutral-800: hsl(226, 25%, 17%);
+    --color-neutral-900: hsl(227, 75%, 14%);
+
+
+    /* Color Variables (Red colors) */
+    --color-red-400: hsl(3, 86%, 64%);
+    --color-red-500: hsl(3, 71%, 56%);
+    --color-red-700: hsl(3, 77%, 44%);
+
+    /* Color Variables (Gradient colors) */
+
+    --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --dark-gradient: linear-gradient(hsl(225, 71%, 5%) 0%, hsl(227, 75%, 14%));
+}
+
+main {
+    width: 80%;
+
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-neutral-700);
+    margin-top: 50px;
+    border-radius: 10px;
+    align-items: center;
+    padding: 30px;
+}
+
+.header div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.header div:last-child {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--color-neutral-600);
+    cursor: pointer;
+}
+
+.title {
+    color: var(--color-neutral-0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.all {
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-700);
+    cursor: pointer;
+}
+
+.all:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    transition: 20sec;
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+.active:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+.inactive:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+.all:hover {
+    background-color: var(--color-red-500);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+.active:hover {
+    background-color: var(--color-red-500);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+.inactive:hover {
+    background-color: var(--color-red-500);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+/* .all,
+.active,
+.inactive:hover {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-neutral-600);
+} */
+
+.active {
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-700);
+    cursor: pointer;
+}
+
+.inactive {
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-700);
+    cursor: pointer;
+}
