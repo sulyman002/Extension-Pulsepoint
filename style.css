@@ -189,9 +189,10 @@ main {
 
 
 
-.devLens .card-logo {
+.devLens .card-logo img{
     color: blue;
-    width: 15%;
+    width: 25%;
+    min-width: 50px;
 }
 
 
@@ -241,32 +242,29 @@ main {
     border-radius: 50%;
     top: 2px;
     left: 3px;
-    
-    
+
+
 }
 
-/* .actions div {
-    width: 10%;
-    height: 2vh;
-    background-color: ;
-    position: relative;
-
-} */
-
-/* .actions div input {
-    width: 100%;
-    height: 100%;
-    border-radius: 14px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+@media screen and (max-width: 1200px) {
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-.toggle{
-    width: 20px;
-    height: 20px;
-    border-radius: 40px
-    background-color: white;
+
+@media screen and (max-width: 850px) {
     
-    
-} */
+    .title {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+.title h1{
+    font-size: clamp(2.3rem, 5vw, 3rem);
+}
+
+
+    .cards_container {
+        grid-template-columns: 1fr;
+    }
+}
