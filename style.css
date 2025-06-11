@@ -141,13 +141,6 @@ main {
     font-weight: 700;
 }
 
-/* .all,
-.active,
-.inactive:hover {
-    outline: 2px solid var(--color-red-400);
-    outline-offset: 2px;
-    background-color: var(--color-neutral-600);
-} */
 
 .active {
     border-radius: 50px;
@@ -183,6 +176,7 @@ main {
     height: 200px;
     border-radius: 23px;
     padding: 20px 30px 0px 20px;
+    box-shadow: .1px .1px 0.2px 2px var(--color-neutral-600);
 }
 
 .devLens {
@@ -210,13 +204,15 @@ main {
 
 .actions {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .actions button {
     padding: 8px 9px;
     color: var(--color-neutral-0);
-    border: .1px solid var(--color-neutral-0);
+    border: none;
+    box-shadow: .1px .1px 0.2px 2px var(--color-neutral-600);
     border-radius: 15px;
     background-color: var(--color-neutral-700);
     cursor: pointer;
