@@ -12,8 +12,9 @@ img {
 body {
     font-family: "Noto Sans", sans-serif;
     font-weight: 400, 500, 700;
-    /* background-image: var(--dark-gradient); */
-    background-color: var(--color-neutral-900);
+    background-image: var(--dark-gradient);
+    color: var(--color-neutral-0);
+    /* background-color: var(--color-neutral-900); */
     width: 100vw;
     height: auto;
     display: flex;
@@ -41,6 +42,19 @@ body {
 
     --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     --dark-gradient: linear-gradient(hsl(225, 71%, 5%) 0%, hsl(227, 75%, 14%));
+
+  
+
+}
+
+
+  #lightMode {
+        background-image: var(--light-gradient);
+    }
+
+#switch-icon img:first-child{
+    display: block;
+    fill: var(--color-red-700);
 }
 
 main {
@@ -75,7 +89,7 @@ main {
 }
 
 .title {
-    color: var(--color-neutral-0);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,12 +181,11 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    color: white;
-
 }
 
+
 .card {
-    background-color: var(--color-neutral-700);
+    background-color: var(--color-neutral-800);
     height: 200px;
     border-radius: 23px;
     padding: 20px 30px 0px 20px;
@@ -189,8 +202,7 @@ main {
 
 
 
-.devLens .card-logo img{
-    color: blue;
+.devLens .card-logo img {
     width: 25%;
     min-width: 50px;
 }
@@ -224,26 +236,36 @@ main {
 
 }
 
-.toggle {
+label {
     width: 40px;
     height: 20px;
+    background-color: var(--color-neutral-600);
     border-radius: 40px;
-    background-color: white;
     position: relative;
     cursor: pointer;
 }
 
-.toggle::before {
-    content: "";
-    position: absolute;
+label::before {
+    content: '';
+    width: 17px;
     height: 16px;
-    width: 16px;
-    background-color: blue;
-    border-radius: 50%;
+    background-color: var(--color-neutral-0);
+    position: absolute;
+    border-radius: 40px;
     top: 2px;
-    left: 3px;
+    left: 2px;
+}
 
+input:checked + label {
+    background-color: var(--color-red-500);
+}
 
+input:checked + label::before {
+    transform: translateX(18px);
+}
+
+input {
+    display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -253,15 +275,15 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-    
+
     .title {
         gap: 20px;
         flex-direction: column;
     }
 
-.title h1{
-    font-size: clamp(2.3rem, 5vw, 3rem);
-}
+    .title h1 {
+        font-size: clamp(2.3rem, 5vw, 3rem);
+    }
 
 
     .cards_container {
