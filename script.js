@@ -8,16 +8,16 @@
 
 
 
-    const buttons = document.querySelectorAll('button');
+    // const buttons = document.querySelectorAll('button');
 
-    buttons.forEach(button => {
+    // buttons.forEach(button => {
 
-        button.addEventListener('click', () => {
-            const ids = button.getAttribute('data-id');
-            const targetDiv = document.querySelector('.cd-' + ids);
-            targetDiv.style.display = 'none';
-        });
-    });
+    //     button.addEventListener('click', () => {
+    //         const ids = button.getAttribute('data-id');
+    //         const targetDiv = document.querySelector('.cd-' + ids);
+    //         targetDiv.style.display = 'none';
+    //     });
+    // });
 
 
 // const brightness = document.querySelector('.header>div:last-child>img');
@@ -41,3 +41,11 @@
 // });
 
 //Question can in put a one section of function in a wrap so that other function wont affect it?
+
+const body = document.querySelector('#body');
+const toggle = document.querySelector('#icon');
+
+
+toggle.addEventListener('click', function () {
+    body.classList.toggle('bright');
+});
