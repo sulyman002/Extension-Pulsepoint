@@ -14,7 +14,7 @@ img {
     font-weight: 400, 500, 700;
     background-image: var(--dark-gradient);
     height: 100vh;
-    
+
     color: var(--color-neutral-0);
     width: 100vw;
     height: auto;
@@ -28,7 +28,6 @@ img {
 }
 
 :root {
-    /* Color Variables (neutral colors) */
     --color-neutral-0: hsl(200, 60%, 99%);
     --color-neutral-100: hsl(0, 0%, 93%);
     --color-neutral-200: hsl(217, 61%, 90%);
