@@ -9,12 +9,13 @@ img {
     width: 100%;
 }
 
-body {
+#body {
     font-family: "Noto Sans", sans-serif;
     font-weight: 400, 500, 700;
     background-image: var(--dark-gradient);
+    height: 100vh;
+    
     color: var(--color-neutral-0);
-    /* background-color: var(--color-neutral-900); */
     width: 100vw;
     height: auto;
     display: flex;
@@ -22,7 +23,7 @@ body {
 }
 
 
-#body.bright body {
+#body.bright {
     background-image: var(--light-gradient);
 }
 
@@ -64,10 +65,12 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-neutral-700);
+    background-repeat: no-repeat;
     margin-top: 50px;
     border-radius: 10px;
     align-items: center;
     padding: 30px;
+    box-shadow: .1px 1px 6px .4px var(--color-neutral-600);
 }
 
 #body.bright .header  {
@@ -89,8 +92,12 @@ main {
     cursor: pointer;
 }
 
+#icon img:last-child {
+    display: none;
+}
+
 #body.bright .header div:last-child  {
-    background-color: var(--color-neutral-100);
+    background-color: var(--color-neutral-300);
 }
 .title { 
     display: flex;
@@ -122,6 +129,7 @@ main {
     justify-content: center;
     background-color: var(--color-neutral-700);
     cursor: pointer;
+    box-shadow: .1px 1px 6px .4px var(--color-neutral-600);
 }
 
 #body.bright .all  {
@@ -129,6 +137,15 @@ main {
 }
 
 .all:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    transition: 20sec;
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+#body.bright .all:active {
     outline: 2px solid var(--color-red-400);
     outline-offset: 2px;
     background-color: var(--color-red-400);
@@ -145,10 +162,30 @@ main {
     font-weight: 700;
 }
 
+#body.bright .active:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    transition: 20sec;
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+
+
 .inactive:active {
     outline: 2px solid var(--color-red-400);
     outline-offset: 2px;
     background-color: var(--color-red-400);
+    color: var(--color-neutral-800);
+    font-weight: 700;
+}
+
+#body.bright .inactive:active {
+    outline: 2px solid var(--color-red-400);
+    outline-offset: 2px;
+    background-color: var(--color-red-400);
+    transition: 20sec;
     color: var(--color-neutral-800);
     font-weight: 700;
 }
@@ -180,6 +217,7 @@ main {
     justify-content: center;
     background-color: var(--color-neutral-700);
     cursor: pointer;
+    box-shadow: .1px 1px 6px .4px var(--color-neutral-600);
 }
 
 #body.bright .active  {
@@ -194,6 +232,7 @@ main {
     display: flex;
     justify-content: center;
     background-color: var(--color-neutral-700);
+    box-shadow: .1px 1px 6px .4px var(--color-neutral-600);
     cursor: pointer;
 }
 
@@ -207,6 +246,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 50px;
 }
 
 
